@@ -14,7 +14,7 @@ const grafico = () => {
                     datasets: [
                         {
                         label: 'Termopar A',
-                        data: [12, 19, 3, 5, 2, 3],
+                        data: [50, 40, 30, 20, 10, 15],
                         fill: false,
                         backgroundColor: [
                             'rgba(255, 99, 132, 1)',
