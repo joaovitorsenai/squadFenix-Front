@@ -5,7 +5,7 @@ import './Footer.css';
 function Footer(){
     return(
         <div className="containerF">
-            @Copyright 2021. Todos os direitos reservados - Squad Fenix 10-09-2021 22:20.
+            @Copyright 2021. Todos os direitos reservados - Squad Fenix 10-09-2021 22:27.
         </div>
     );
 
