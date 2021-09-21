@@ -52,7 +52,7 @@ class Posicoes extends Component{
                 <td>{list.rotacao}</td>
                 <td>{list.tempo}</td>
               </tr>
-            ))
+          ))
            }
           </tbody>
   
