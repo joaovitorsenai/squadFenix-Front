@@ -4,7 +4,8 @@ import {Switch, Route} from 'react-router-dom'
 import Home from './pages/Home'
 import CadTeste from './pages/CadTeste'
 import Tabela from './pages/Tabela'
-import Grafico from './pages/Grafico';
+import Grafico from './pages/Grafico'
+import Medias from './pages/TabelaMedia'
 
 export default () => {
 
@@ -25,6 +26,10 @@ export default () => {
 
         <Route exact path="/grafico">
             <Grafico/>
+        </Route>
+
+        <Route exact path="/media">
+            <Medias/>
         </Route>
     </Switch>    
     );

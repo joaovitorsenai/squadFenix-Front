@@ -1,8 +1,11 @@
 import React, { Component } from "react";
-import {Line} from 'react-chartjs-2'
+import {Line} from 'react-chartjs-2';
+import {Link} from 'react-router-dom';
 import api from "../../api";
 import Header from "../../Header";
 import Footer from "../../Footer";
+
+import "./Grafico.css"
 
 class Grafico extends Component{
 
@@ -14,8 +17,9 @@ class Grafico extends Component{
         this.setState({dados : response.data})
       }
 
+      
+
     render(){
-        var chart = document.getElementById('myChart');
         const {dados} = this.state;
         console.log(dados);
 
@@ -30,7 +34,7 @@ class Grafico extends Component{
         <div className="container">
             <Header/>
                 <div className="grafico">
-                <Line id="myChart" 
+                <Line 
                 data={{
                     labels: id,
                     datasets: [
@@ -39,52 +43,48 @@ class Grafico extends Component{
                         data: tA,
                         fill: false,
                         backgroundColor: [
-                            'rgba(255, 99, 132, 1)',
+                            'transparent',
                             ],
                         borderColor: [
-                            'rgba(255, 99, 132, 1)',
+                            'rgba(148,0,211,0.50)',
                             ],
-                        tension: 0.2,
-                        borderWidth: 2
+                        borderWidth: 3
                         },
                         {
                         label: 'Termopar 1',
                         data: t1,
                         fill: false,
                         backgroundColor: [
-                            'rgba(54, 162, 235, 1)',
+                            'transparent',
                                 ],
                         borderColor: [
-                            'rgba(54, 162, 235, 1)',
+                            'rgba(0,0,128,0.50)',
                             ],
-                        tension: 0.2,
-                        borderWidth: 2
+                        borderWidth: 3
                         },
                         {
                             label: 'Termopar 2',
                             data: t2,
                             fill: false,
                             backgroundColor: [
-                                'rgba(255, 206, 86, 1)',
+                                'transparent',
                                 ],
                             borderColor: [
-                                'rgba(255, 206, 86, 1)',
+                                'rgba(139,0,0,0.50)',
                             ],
-                            tension: 0.2,
-                            borderWidth: 2
+                            borderWidth: 3
                         },
                         {
                             label: 'Termopar 3',
                             data: t3,
                             fill: false,
                             backgroundColor: [
-                                'rgba(75, 192, 192, 1)' ,
+                                'transparent' ,
                             ],
                             borderColor: [    
-                                'rgba(75, 192, 192, 1)',   
+                                'rgba(0,100,0,0.50)',   
                             ],
-                            tension: 0.2,
-                            borderWidth: 2
+                            borderWidth: 3
                         },
                     ],
                 
@@ -102,9 +102,12 @@ class Grafico extends Component{
                                 }
                             ]
                         }
-                    }}
-                    
+                    }} 
                 />
+                </div>
+                <div className="botoes">
+                    <a className="botao" href="http://localhost:8080/temperaturacsv">Baixar CSV</a>
+                    <Link className="botao" to="/media">Ver Resultado</Link>
                 </div>
             <Footer/>
         </div>    
