@@ -1,10 +1,11 @@
 .botoes {
     margin-top: 20px;
     margin-bottom: 5%;
+    margin-left: 36%;
 }
 
 .botao{
-    margin-left: 20px;
+    margin-left: 30px;
     font-family: Heebo;
     font-weight: 800;
     font-size: 1.0rem;
