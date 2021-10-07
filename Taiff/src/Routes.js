@@ -7,6 +7,7 @@ import Tabela from './pages/Tabela'
 import Grafico from './pages/Grafico'
 import Medias from './pages/TabelaMedia'
 import CadProduto from './pages/CadProduto';
+import CadZeroPeca from './pages/CadZeroPeca';
 
 export default () => {
 
@@ -35,6 +36,9 @@ export default () => {
 
         <Route exact path="/cadProduto">
             <CadProduto/>
+        </Route>
+        <Route exact path="/cadZeroPeca">
+            <CadZeroPeca/>
         </Route>
     </Switch>    
     );
