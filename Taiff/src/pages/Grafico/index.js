@@ -17,9 +17,8 @@ class Grafico extends Component{
         this.setState({dados : response.data})
       }
 
-      
-
     render(){
+
         const {dados} = this.state;
         console.log(dados);
 
@@ -29,7 +28,7 @@ class Grafico extends Component{
         const t3 = dados.map((dado) =>(dado.t3));
         const tA = dados.map((dado) =>(dado.tAmbiente));
 
-
+         
     return(
         <div className="container">
             <Header/>
@@ -107,7 +106,6 @@ class Grafico extends Component{
                 </div>
                 <div className="botoes">
                     <a className="botao" href="http://localhost:8080/temperaturacsv">Baixar CSV</a>
-                    <Link className="botao" to="/media">Ver Resultado</Link>
                 </div>
             <Footer/>
         </div>    

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import api from "../../api";
 import Header from "../../Header";
 import Footer from "../../Footer";
+import { Link } from "react-router-dom";
 
 class CadZeroPeca extends Component{
 
@@ -12,14 +13,12 @@ class CadZeroPeca extends Component{
             y:"",
             z:"",
             r:"",
-            idProduto:""
             
         }
         this.handleChangeX = this.handleChangeX.bind(this);
         this.handleChangeY = this.handleChangeY.bind(this);
         this.handleChangeZ = this.handleChangeZ.bind(this);
         this.handleChangeR = this.handleChangeR.bind(this);
-        this.handleChangeP = this.handleChangeP.bind(this);
     
     }
     
@@ -40,11 +39,8 @@ class CadZeroPeca extends Component{
       handleChangeR(event) {
         this.setState({r: event.target.value});
       };
-        
-      handleChangeP(event) {
-        this.setState({idProduto: event.target.value});
-      };
-    
+
+
       onRequest = async () =>{
     
         try{
@@ -81,13 +77,8 @@ render(){
                         <input type="text" id="r" value={this.state.r} onChange={this.handleChangeR}/>
                     </div>
 
-                    <div className="fields">
-                        <label>idProduto</label>
-                        <input type="text" id="p" value={this.state.idProduto} onChange={this.handleChangeP}/>
-                    </div>
-
                     <div className="btn-zeroPeca">
-                            <button onClick={this.onRequest} type="submit">Enviar</button>
+                            <Link onClick={this.onRequest} to="/cadTeste" type="submit">Enviar</Link>
                         </div>
                 </form>
             <Footer/>
@@ -97,4 +88,4 @@ render(){
 
 }
 
-export default CadZeroPeca
+export default CadZeroPeca;

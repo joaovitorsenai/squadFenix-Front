@@ -13,7 +13,7 @@ class Posicoes extends Component{
       lista: [],
     }
     async componentDidMount(){
-      const response = await api.get('/posicoes');
+      const response = await api.get('/teste/2');
       this.setState({lista : response.data})
     }
     render(){
@@ -31,7 +31,6 @@ class Posicoes extends Component{
           <thead>
           <tr>
             <th>ID</th>
-            <th>Nome do Produto</th>
             <th>Eixo X</th>
             <th>Eixo Y</th>
             <th>Eixo Z</th>
@@ -45,7 +44,6 @@ class Posicoes extends Component{
             lista.map((list) => (
               <tr key = {list.id}>
                 <td>{list.id}</td>
-                <td>{list.produto.nome}</td>
                 <td>{list.eixoX}</td>
                 <td>{list.eixoY}</td>
                 <td>{list.eixoZ}</td>

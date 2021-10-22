@@ -2,11 +2,11 @@ import React from 'react';
 import {Switch, Route} from 'react-router-dom'
 
 import Home from './pages/Home'
-import CadTeste from './pages/CadTeste'
+import CadPosicoes from './pages/CadPosicoes'
 import Tabela from './pages/Tabela'
 import Grafico from './pages/Grafico'
 import Medias from './pages/TabelaMedia'
-import CadProduto from './pages/CadProduto';
+import CadTeste from './pages/CadTeste';
 import CadZeroPeca from './pages/CadZeroPeca';
 
 export default () => {
@@ -22,8 +22,8 @@ export default () => {
             <Tabela/>
         </Route>
 
-        <Route exact path="/cadastro">
-            <CadTeste/>
+        <Route exact path="/cadPosicoes">
+            <CadPosicoes/>
         </Route>
 
         <Route exact path="/grafico">
@@ -34,8 +34,8 @@ export default () => {
             <Medias/>
         </Route>
 
-        <Route exact path="/cadProduto">
-            <CadProduto/>
+        <Route exact path="/cadTeste">
+            <CadTeste/>
         </Route>
         <Route exact path="/cadZeroPeca">
             <CadZeroPeca/>

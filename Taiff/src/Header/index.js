@@ -16,7 +16,7 @@ function Header(){
                 <nav>
                 <ul>
                     <li><Link className="linkH" to="/tabela">Tabela</Link></li>
-                    <li><Link className="linkH" to="/cadastro">Cadastro de Posições</Link></li>
+                    <li><Link className="linkH" to="/cadPosicoes">Cadastro de Posições</Link></li>
                     <li><Link className="linkH" to="/grafico">Gráfico</Link></li>
                     <li><Link className="linkH" to="/">Sair</Link></li>
                 </ul>

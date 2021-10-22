@@ -14,7 +14,7 @@ const Home = () => {
                     <div className="inicio">
                     <img id="img" src={img}/>
                         <div className="links">
-                                <Link className="link" to="/cadastro">Novo Teste</Link>  
+                                <Link className="link" to="/cadZeroPeca">Novo Teste</Link>  
                                 <Link className="link" to="/tabela">Lista de Testes</Link>
                         </div>
                     </div>
