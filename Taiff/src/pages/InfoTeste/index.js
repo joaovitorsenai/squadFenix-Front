@@ -85,7 +85,6 @@ class InfoTeste extends Component{
                   </div>
 
                   <div className="btn-post">
-                      <button className="botao" type="submit">Enviar</button>
                       <button className="botao" onClick={()=>relatorioPDF(lista)} >Gerar Relatório</button>
                   </div>
               </form>
