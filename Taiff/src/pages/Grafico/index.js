@@ -106,6 +106,7 @@ class Grafico extends Component{
                 </div>
                 <div className="botoes">
                     <a className="botao" href="http://localhost:8080/temperaturacsv">Baixar CSV</a>
+                    <Link className="linkH" to="/InfoTeste">Gerar Relatório</Link>
                 </div>
             <Footer/>
         </div>    

@@ -5,7 +5,7 @@ import Home from './pages/Home'
 import CadPosicoes from './pages/CadPosicoes'
 import Tabela from './pages/Tabela'
 import Grafico from './pages/Grafico'
-import Medias from './pages/TabelaMedia'
+import InfoTeste from './pages/InfoTeste'
 import CadTeste from './pages/CadTeste';
 import CadZeroPeca from './pages/CadZeroPeca';
 
@@ -30,8 +30,8 @@ export default () => {
             <Grafico/>
         </Route>
 
-        <Route exact path="/media">
-            <Medias/>
+        <Route exact path="/infoTeste">
+            <InfoTeste/>
         </Route>
 
         <Route exact path="/cadTeste">

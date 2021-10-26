@@ -7,7 +7,7 @@ import relatorioPDF from "../../Reports/Relatorio/relatorio";
 
 import './Media.css';
 
-class Medias extends Component{
+class InfoTeste extends Component{
 
     state = {
       lista: [],
@@ -30,38 +30,63 @@ class Medias extends Component{
               <form>
 
                   <div className="fields">
-                      <label>Teste</label>
+                      <label>Executante</label>
                       <input type="text"/>
                   </div>
 
                   <div className="fields">
-                      <label>Eixo X</label>
+                      <label>Data</label>
                       <input type="text"/>
                   </div>
 
                   <div className="fields">
-                      <label>Eixo Y</label>
+                      <label>Tipo do Produto</label>
                       <input type="text"/>
                   </div>
 
                   <div className="fields">
-                      <label>Eixo Z</label>
+                      <label>Especificar</label>
                       <input type="text"/>
                   </div>
 
                   <div className="fields">
-                      <label>Rotação</label>
+                      <label>Fabricante</label>
                       <input type="text"/>
                   </div>
 
                   <div className="fields">
-                      <label>Tempo(s)</label>
+                      <label>Modelo na Placa</label>
+                      <input type="text"/>
+                  </div>
+
+                  <div className="fields">
+                      <label>Freq. da Placa [Hz]</label>
+                      <input type="text"/>
+                  </div>
+
+                  <div className="fields">
+                      <label>País de Fabricação</label>
+                      <input type="text"/>
+                  </div>
+
+                  <div className="fields">
+                      <label>Nome do Modelo Comercial</label>
+                      <input type="text"/>
+                  </div>
+
+                  <div className="fields">
+                      <label>Tens. na Placa [V]</label>
+                      <input type="text"/>
+                  </div>
+
+                  <div className="fields">
+                      <label>Pot. da Placa [W]</label>
                       <input type="text"/>
                   </div>
 
                   <div className="btn-post">
                       <button className="botao" type="submit">Enviar</button>
-                      <button className="botao" onClick={()=>relatorioPDF()} >Gerar Relatório</button>
+                      <button className="botao" onClick={()=>relatorioPDF(lista)} >Gerar Relatório</button>
                   </div>
               </form>
 
@@ -75,4 +100,4 @@ class Medias extends Component{
     
   }
 
-  export default Medias;
+  export default InfoTeste;
