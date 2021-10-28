@@ -4,6 +4,8 @@ import Header from "../../Header";
 import Footer from "../../Footer";
 import { Link } from "react-router-dom";
 
+import './ZeroPeca.css';
+
 class CadZeroPeca extends Component{
 
     constructor(props){
@@ -59,26 +61,26 @@ render(){
                 <h2>Cadastro Zero Peça</h2>
                 <form>
                     <div className="fields">
-                        <label>eixoX</label>
-                        <input type="text" id="x" value={this.state.x} onChange={this.handleChangeX} />
+                        
+                        <input type="text" id="x" value={this.state.x} onChange={this.handleChangeX} className="campo" name="Eixo-X" placeholder="Eixo-X" />
                     </div>
 
                     <div className="fields">
-                        <label>eixoY</label>
-                        <input type="text" id="y" value={this.state.y} onChange={this.handleChangeY}/>
+                        
+                        <input type="text" id="y" value={this.state.y} onChange={this.handleChangeY} className="campo" name="Eixo-Y" placeholder="Eixo-Y" />
                     </div>
                     <div className="fields">
-                        <label>eixoZ</label>
-                        <input type="text" id="z" value={this.state.z} onChange={this.handleChangeZ}/>
+                        
+                        <input type="text" id="z" value={this.state.z} onChange={this.handleChangeZ} className="campo" name="Eixo-Z" placeholder="Eixo-Z"/>
                     </div>
 
                     <div className="fields">
-                        <label>Rotação</label>
-                        <input type="text" id="r" value={this.state.r} onChange={this.handleChangeR}/>
+                        
+                        <input type="text" id="r" value={this.state.r} onChange={this.handleChangeR} className="campo" name="Rotação" placeholder="Rotação"/>
                     </div>
 
-                    <div className="btn-zeroPeca">
-                            <Link onClick={this.onRequest} to="/cadTeste" type="submit">Enviar</Link>
+                    <div className="btn-zeroPeca" >
+                            <a href="http://localhost:3000/cadTeste" onClick={this.onRequest} to="/cadTeste" type="submit">Enviar</a>
                         </div>
                 </form>
             <Footer/>

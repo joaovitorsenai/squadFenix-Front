@@ -30,58 +30,58 @@ class InfoTeste extends Component{
               <form>
 
                   <div className="fields">
-                      <label>Executante</label>
-                      <input type="text"/>
+                      
+                      <input type="text" className="campo" name="Execultante" placeholder="Executante"/>
                   </div>
 
                   <div className="fields">
-                      <label>Data</label>
-                      <input type="text"/>
+                      
+                      <input type="text" className="campo"name="Data" placeholder="xx/xx/xxxx"/>
                   </div>
 
                   <div className="fields">
-                      <label>Tipo do Produto</label>
-                      <input type="text"/>
+                      
+                      <input type="text" className="campo"name="Produto" placeholder="Produto"/>
                   </div>
 
                   <div className="fields">
-                      <label>Especificar</label>
-                      <input type="text"/>
+                      
+                      <input type="text" className="campo"name="Especificação" placeholder="Especificação"/>
                   </div>
 
                   <div className="fields">
-                      <label>Fabricante</label>
-                      <input type="text"/>
+                      
+                      <input type="text" className="campo"name="Fabricante" placeholder="Fabricante"/>
                   </div>
 
                   <div className="fields">
-                      <label>Modelo na Placa</label>
-                      <input type="text"/>
+                      
+                      <input type="text" className="campo" name="Modelo na Placa" placeholder="Modelo na Placa"/>
                   </div>
 
                   <div className="fields">
-                      <label>Freq. da Placa [Hz]</label>
-                      <input type="text"/>
+                      
+                      <input type="text" className="campo" name="Freq. da Placa [Hz]" placeholder="Freq. da Placa [Hz]"/>
                   </div>
 
                   <div className="fields">
-                      <label>País de Fabricação</label>
-                      <input type="text"/>
+                      
+                      <input type="text" className="campo" name="País de Fabricação" placeholder="País de Fabricação"/>
                   </div>
 
                   <div className="fields">
-                      <label>Nome do Modelo Comercial</label>
-                      <input type="text"/>
+                      
+                      <input type="text" className="campo" name="Nome do Modelo Comercial" placeholder="Nome do Modelo Comercial"/>
                   </div>
 
                   <div className="fields">
-                      <label>Tens. na Placa [V]</label>
-                      <input type="text"/>
+                      
+                      <input type="text" className="campo" name="Tens. na Placa [V]" placeholder="Tens. na Placa [V]"/>
                   </div>
 
                   <div className="fields">
-                      <label>Pot. da Placa [W]</label>
-                      <input type="text"/>
+                      
+                      <input type="text" className="campo" name="Pot. da Placa [W]" placeholder="Pot. da Placa [W]"/>
                   </div>
 
                   <div className="btn-post">

@@ -57,23 +57,23 @@ render(){
             <h2> Cadastro de Teste</h2>
                 <form>
                     <div className="fields">
-                        <label>Nome</label>
-                        <input type="text" id="n" value={this.state.nome} onChange={this.handleChangeN}/>
+                        
+                        <input type="text" id="n" value={this.state.nome} onChange={this.handleChangeN} className="campo" name="Nome" placeholder="Nome"/>
                     </div>
 
                     <div className="fields">
-                        <label>Modelo</label>
-                        <input type="text" id="m" value={this.state.modelo} onChange={this.handleChangeM}/>
+                        
+                        <input type="text" id="m" value={this.state.modelo} onChange={this.handleChangeM} className="campo" name="Modelo" placeholder="Modelo"/>
                     </div>
 
                     <div className="fields">
-                        <label>Data</label>
-                        <input type="text" id="d" value={this.state.dataTeste} onChange={this.handleChangeD}/>
+                        
+                        <input type="text" id="d" value={this.state.dataTeste} onChange={this.handleChangeD} className="campo" name="Data" placeholder="xx/xx/xxxx"/>
                     </div>
 
                     <div className="fields">
-                        <label>Zero Peça</label>
-                        <input type="text" id="z" value={this.state.idZeroPeca} onChange={this.handleChangeZ}/>
+                        
+                        <input type="text" id="z" value={this.state.idZeroPeca} onChange={this.handleChangeZ} className="campo" name="Zero Peça" placeholder="Zero Peça"/>
                     </div>
 
                     <div className="btn-produto">

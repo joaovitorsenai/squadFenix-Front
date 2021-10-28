@@ -8,3 +8,29 @@
 .container{
     width: 80%;
 }
+
+.campo{
+    text-align: center;
+    width: 300px;
+    border-width: 3px;
+    border-color: black;
+    border-radius: 20px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+
+}
+
+.botao{
+    background-color:#363636;
+    color: white;
+    border-color: black;   
+}
+
+.botao {
+    transition-duration: 0.4s;
+  }
+  
+.botao:hover {
+    background-color: #808080; /* Green */
+    color: white;
+  }

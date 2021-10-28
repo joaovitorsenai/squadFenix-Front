@@ -81,37 +81,37 @@ render(){
                     <form>
 
                         <div className="fields">
-                            <label>Teste</label>
-                            <input type="text" id="idTeste" value={this.state.teste} onChange={this.handleChangeTe} />
+                            
+                            <input type="text" id="idTeste" value={this.state.teste} onChange={this.handleChangeTe} className="campo" name="Teste" placeholder="Teste" />
                         </div>
 
                         <div className="fields">
-                            <label>Eixo X</label>
-                            <input type="text" id="x" value={this.state.eixoX} onChange={this.handleChangeX} />
+                            
+                            <input type="text" id="x" value={this.state.eixoX} onChange={this.handleChangeX} className="campo" name="Eixo-X" placeholder="Eixo-X" />
                         </div>
 
                         <div className="fields">
-                            <label>Eixo Y</label>
-                            <input type="text" id="y" value={this.state.eixoY} onChange={this.handleChangeY}  />
+                            
+                            <input type="text" id="y" value={this.state.eixoY} onChange={this.handleChangeY} className="campo" name="Eixo-Y" placeholder="Eixo-Y" />
                         </div>
 
                         <div className="fields">
-                            <label>Eixo Z</label>
-                            <input type="text" id="z" value={this.state.eixoZ} onChange={this.handleChangeZ} />
+                          
+                            <input type="text" id="z" value={this.state.eixoZ} onChange={this.handleChangeZ} className="campo" name="Eixo-Z" placeholder="Eixo-Z" />
                         </div>
 
                         <div className="fields">
-                            <label>Rotação</label>
-                            <input type="text" id="rot" value={this.state.rotacao} onChange={this.handleChangeR} />
+                            
+                            <input type="text" id="rot" value={this.state.rotacao} onChange={this.handleChangeR} className="campo" name="Rotação" placeholder="Rotação" />
                         </div>
 
                         <div className="fields">
-                            <label>Tempo(s)</label>
-                            <input type="text" id="temp" value={this.state.tempo} onChange={this.handleChangeT} />
+                            
+                            <input type="text" id="temp" value={this.state.tempo} onChange={this.handleChangeT} className="campo" name="Tempo(s)" placeholder="Tempo(s)" />
                         </div>
 
                         <div className="btn-post">
-                            <button onClick={this.onRequest} type="submit">Enviar</button>
+                            <button className="botao" onClick={this.onRequest} type="submit">Enviar</button>
                         </div>
                     </form>
 
