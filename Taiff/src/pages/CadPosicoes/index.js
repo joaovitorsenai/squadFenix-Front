@@ -11,6 +11,7 @@ class cadPosicoes extends Component{
     constructor(props){
     super(props);
     this.state={
+      lista: [],
         eixoX:"",
         eixoY:"",
         eixoZ:"",
@@ -64,8 +65,20 @@ handleChangeX(event) {
 
   };
 
+  async componentDidMount(){
+    const response = await api.get('/testes');
+    this.setState({lista : response.data})
+  }
+
 
 render(){
+    const {lista} = this.state;
+    console.log(lista);
+
+    const ultimo = lista[lista.length -1];
+    console.log(ultimo);
+    
+
   return(
     <div className="container">
       <Header/>
