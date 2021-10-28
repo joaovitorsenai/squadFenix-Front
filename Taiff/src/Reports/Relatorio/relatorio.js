@@ -1,20 +1,22 @@
 import pdfMake from 'pdfmake/build/pdfmake'
 import pdfFonts from 'pdfmake/build/vfs_fonts'
 
-function relatorioPDF(medias){
+function relatorioPDF(medias, nome, data, local, tipoProduto, especificar, fabricante, modeloPlaca, freqPlaca, pais, nomeComercial, tensPlaca, potPlaca){
     pdfMake.vfs = pdfFonts.pdfMake.vfs;
 
     const dados = medias.map((media) => {
        return[
-           {text: media.id, fontSize: 9},
-           {text: media.mediaTA, fontSize: 9},
-           {text: media.mediaT1, fontSize: 9},
-           {text: media.mediaT2, fontSize: 9},
-           {text: media.mediaT3, fontSize: 9},
-           {text: media.mediaM, fontSize: 9},
-           {text: media.mediaCor, fontSize: 9}
+           {text: media.id},
+           {text: media.mediaTA},
+           {text: media.mediaT1},
+           {text: media.mediaT2},
+           {text: media.mediaT3},
+           {text: media.mediaM},
+           {text: media.mediaCor}
        ] 
     });
+
+    console.log(dados)
 
     const docDef = {
         pageSize:'A4',
@@ -30,8 +32,8 @@ function relatorioPDF(medias){
 			table: {
                 widths: ['*','*','*'],
 				body: [
-					['EXECUTANTE', 'DATA:', 'LOCAL:'],
-					['1', '2', '3']
+					['EXECUTANTE:', 'DATA:', 'LOCAL:'],
+					[{text: nome}, {text: data}, {text: local}]
 				],
 			},
             layout: {
@@ -55,7 +57,7 @@ function relatorioPDF(medias){
                 widths: ['*','*'],
 				body: [
 					['TIPO DE PRODUTO:', 'ESPECIFICAR:'],
-					['1', '2']
+					[{text: tipoProduto}, {text: especificar}]
 				]
 			},
             layout: {
@@ -70,7 +72,7 @@ function relatorioPDF(medias){
                 widths: ['*','*','*','*'],
 				body: [
 					['FABRICANTE:', 'MODELO NA PLACA:', 'FREQ. NA PLACA [Hz]', 'PAIS DE FABRICAÇÃO'],
-					['1', '2', '3', '4']
+					[{text: fabricante}, {text: modeloPlaca}, {text: freqPlaca}, {text: pais}]
 				]
 			},
             layout: {
@@ -85,7 +87,7 @@ function relatorioPDF(medias){
                 widths: ['*','*','*'],
 				body: [
 					['NOME DO MODELO COMERCIAL:', 'TENS. NA PLACA [V]:', 'POT. NA PLACA [W]:'],
-					['1', '2', '3']
+					[{text: nomeComercial}, {text: tensPlaca}, {text: potPlaca}]
 				]
 			},
             layout: {

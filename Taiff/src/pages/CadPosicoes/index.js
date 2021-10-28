@@ -52,7 +52,6 @@ handleChangeX(event) {
   handleChangeTe(event) {
     this.setState({teste: event.target.value});
   }
-    
 
   onRequest = async () =>{
 
