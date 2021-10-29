@@ -108,7 +108,6 @@ class InfoTeste extends Component{
               <form>
 
                   <div className="fields">
-<<<<<<< HEAD
                       
                       <input type="text" className="campo" name="Execultante" placeholder="Executante"/>
                   </div>
@@ -161,65 +160,6 @@ class InfoTeste extends Component{
                   <div className="fields">
                       
                       <input type="text" className="campo" name="Pot. da Placa [W]" placeholder="Pot. da Placa [W]"/>
-=======
-                      <label>Executante</label>
-                      <input type="text" className="inserir" value={this.state.nome} onChange={this.handleChangeNome}/>
-                  </div>
-
-                  <div className="fields">
-                      <label>Data</label>
-                      <input type="text" className="inserir" value={this.state.data} onChange={this.handleChangeData}/>
-                  </div>
-
-                  <div className="fields">
-                      <label>Local</label>
-                      <input type="text" className="inserir" value={this.state.local} onChange={this.handleChangeLocal}/>
-                  </div>
-
-                  <div className="fields">
-                      <label>Tipo do Produto</label>
-                      <input type="text" className="inserir" value={this.state.tipoProduto} onChange={this.handleChangeTipo}/>
-                  </div>
-
-                  <div className="fields">
-                      <label>Especificar</label>
-                      <input type="text" className="inserir" value={this.state.especificar} onChange={this.handleChangeEspec}/>
-                  </div>
-
-                  <div className="fields">
-                      <label>Fabricante</label>
-                      <input type="text" className="inserir" value={this.state.fabricante} onChange={this.handleChangeFabri}/>
-                  </div>
-
-                  <div className="fields">
-                      <label>Modelo na Placa</label>
-                      <input type="text" className="inserir" value={this.state.modeloPlaca} onChange={this.handleChangeModelo}/>
-                  </div>
-
-                  <div className="fields">
-                      <label>Freq. da Placa [Hz]</label>
-                      <input type="text" className="inserir" value={this.state.freqPlaca} onChange={this.handleChangeFreq}/>
-                  </div>
-
-                  <div className="fields">
-                      <label>País de Fabricação</label>
-                      <input type="text" className="inserir" value={this.state.pais} onChange={this.handleChangePais}/>
-                  </div>
-
-                  <div className="fields">
-                      <label>Nome do Modelo Comercial</label>
-                      <input type="text" className="inserir" value={this.state.nomeComercial} onChange={this.handleChangeNomeComercial}/>
-                  </div>
-
-                  <div className="fields">
-                      <label>Tens. na Placa [V]</label>
-                      <input type="text" className="inserir" value={this.state.tensPlaca} onChange={this.handleChangeTens}/>
-                  </div>
-
-                  <div className="fields">
-                      <label>Pot. da Placa [W]</label>
-                      <input type="text" className="inserir" value={this.state.potPlaca} onChange={this.handleChangePot}/>
->>>>>>> feature/relatorio
                   </div>
 
                  
