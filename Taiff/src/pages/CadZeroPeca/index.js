@@ -21,6 +21,8 @@ class CadZeroPeca extends Component{
         this.handleChangeY = this.handleChangeY.bind(this);
         this.handleChangeZ = this.handleChangeZ.bind(this);
         this.handleChangeR = this.handleChangeR.bind(this);
+
+        
     
     }
     
