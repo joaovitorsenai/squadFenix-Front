@@ -6,6 +6,7 @@ import Header from "../../Header";
 import Footer from "../../Footer";
 
 import "./Grafico.css"
+import { Title } from "chart.js";
 
 class Grafico extends Component{
 
@@ -47,7 +48,7 @@ class Grafico extends Component{
                         borderColor: [
                             'rgba(148,0,211,0.50)',
                             ],
-                        borderWidth: 3
+                        borderWidth: 2
                         },
                         {
                         label: 'Termopar 1',
@@ -59,7 +60,7 @@ class Grafico extends Component{
                         borderColor: [
                             'rgba(0,0,128,0.50)',
                             ],
-                        borderWidth: 3
+                        borderWidth: 2
                         },
                         {
                             label: 'Termopar 2',
@@ -71,7 +72,7 @@ class Grafico extends Component{
                             borderColor: [
                                 'rgba(139,0,0,0.50)',
                             ],
-                            borderWidth: 3
+                            borderWidth: 2
                         },
                         {
                             label: 'Termopar 3',
@@ -83,7 +84,7 @@ class Grafico extends Component{
                             borderColor: [    
                                 'rgba(0,100,0,0.50)',   
                             ],
-                            borderWidth: 3
+                            borderWidth: 2
                         },
                     ],
                 
@@ -102,11 +103,12 @@ class Grafico extends Component{
                             ]
                         }
                     }} 
+                    
                 />
                 </div>
                 <div className="botoes">
                     <a className="botao" href="http://localhost:8080/temperaturacsv">Baixar CSV</a>
-                    <Link className="linkH" to="/InfoTeste">Gerar Relatório</Link>
+                    <Link className="botao" to="/InfoTeste">Gerar Relatório</Link>
                 </div>
             <Footer/>
         </div>    
