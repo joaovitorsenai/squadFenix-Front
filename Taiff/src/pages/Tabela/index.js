@@ -28,15 +28,17 @@ class Posicoes extends Component{
         
         <h2 className="title">Lista dos Testes</h2>
         {
-            lista.map((list) => (   
+            lista.map((list) => (    
         <Table className="tabela" striped bordered hover variant="dark">
           <thead>
             <tr>
-              <th>ID</th>
-              <th>Nome</th>
-              <th>Modelo</th>
-              <th>Data</th>
-              <th><button>Iniciar Teste Automatizado</button></th>
+              <th className="titulos">ID</th>
+              <th className="titulos">Nome</th>
+              <th className="titulos">Modelo</th>
+              <th className="titulos">Data</th>
+              <th></th>
+              {//<th><button>Iniciar Teste Automatizado</button></th>
+              }
             </tr>
           </thead>
           <tbody>
@@ -50,7 +52,7 @@ class Posicoes extends Component{
               </tr>
 
               <tr>
-                <th>Zero Peça</th>
+                <th className="titulos">Zero Peça</th>
               </tr>
               <tr>
                 <th>Eixo X</th>
@@ -69,7 +71,7 @@ class Posicoes extends Component{
               </tr>
 
               <tr>
-                <th>Posiçoes</th>
+                <th className="titulos">Posiçoes</th>
               </tr>
               <tr>
                 <th>Eixo X</th>

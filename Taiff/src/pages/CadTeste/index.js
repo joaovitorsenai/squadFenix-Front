@@ -8,7 +8,9 @@ class CadTeste extends Component{
 
     constructor(props){
         super(props);
+        var ultimo;
         this.state={
+            lista:[],
             nome:"",
             modelo:"",
             dataTeste:"",
@@ -17,12 +19,12 @@ class CadTeste extends Component{
         this.handleChangeN = this.handleChangeN.bind(this);
         this.handleChangeM = this.handleChangeM.bind(this);
         this.handleChangeD = this.handleChangeD.bind(this);
-        this.handleChangeZ = this.handleChangeZ.bind(this);
     
     }
     
     handleChangeN(event) {
         this.setState({nome: event.target.value});
+        this.setState({idZeroPeca: this.ultimo});
       };
     
       handleChangeM(event) {
@@ -33,11 +35,7 @@ class CadTeste extends Component{
         this.setState({dataTeste: event.target.value});
       };
 
-      handleChangeZ(event) {
-        this.setState({idZeroPeca: event.target.value});
-      };
         
-    
       onRequest = async () =>{
     
         try{
@@ -49,7 +47,23 @@ class CadTeste extends Component{
     
       };
 
+      async componentDidMount(){
+        const response = await api.get('/zeroPeca');
+        this.setState({lista : response.data})
+      }
+
 render(){
+    const {lista} = this.state;
+    console.log(lista);
+
+    const listaID = lista.map((list) => {
+        return list.id
+    });
+
+    this.ultimo = listaID[listaID.length -1];
+    console.log(this.ultimo);
+
+
     return(
 
         <div className="container">
@@ -69,11 +83,6 @@ render(){
                     <div className="fields">
                         
                         <input type="text" id="d" value={this.state.dataTeste} onChange={this.handleChangeD} className="campo" name="Data" placeholder="xx/xx/xxxx"/>
-                    </div>
-
-                    <div className="fields">
-                        
-                        <input type="text" id="z" value={this.state.idZeroPeca} onChange={this.handleChangeZ} className="campo" name="Zero Peça" placeholder="Zero Peça"/>
                     </div>
 
                     <div className="btn-produto">

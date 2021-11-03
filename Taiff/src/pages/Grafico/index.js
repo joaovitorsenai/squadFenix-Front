@@ -42,7 +42,7 @@ class Grafico extends Component{
                         data: tA,
                         fill: false,
                         backgroundColor: [
-                            'transparent',
+                            'rgba(0,0,0,0)',
                             ],
                         borderColor: [
                             'rgba(148,0,211,0.50)',
@@ -54,7 +54,7 @@ class Grafico extends Component{
                         data: t1,
                         fill: false,
                         backgroundColor: [
-                            'transparent',
+                            'rgba(0,0,0,0)',
                                 ],
                         borderColor: [
                             'rgba(0,0,128,0.50)',
@@ -66,7 +66,7 @@ class Grafico extends Component{
                             data: t2,
                             fill: false,
                             backgroundColor: [
-                                'transparent',
+                                'rgba(0,0,0,0)',
                                 ],
                             borderColor: [
                                 'rgba(139,0,0,0.50)',
@@ -78,7 +78,7 @@ class Grafico extends Component{
                             data: t3,
                             fill: false,
                             backgroundColor: [
-                                'transparent' ,
+                                'rgba(0,0,0,0)' ,
                             ],
                             borderColor: [    
                                 'rgba(0,100,0,0.50)',   

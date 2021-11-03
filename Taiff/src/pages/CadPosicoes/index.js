@@ -10,6 +10,7 @@ import './Form.css';
 class cadPosicoes extends Component{
     constructor(props){
     super(props);
+    var ultimo;
     this.state={
       lista: [],
         eixoX:"",
@@ -24,14 +25,12 @@ class cadPosicoes extends Component{
     this.handleChangeZ = this.handleChangeZ.bind(this);
     this.handleChangeR = this.handleChangeR.bind(this);
     this.handleChangeT = this.handleChangeT.bind(this);
-    this.handleChangeTe = this.handleChangeTe.bind(this);
 
 }
 
-
-
 handleChangeX(event) {
     this.setState({eixoX: event.target.value});
+    this.setState({teste: this.ultimo});
   };
 
   handleChangeY(event) {
@@ -49,10 +48,6 @@ handleChangeX(event) {
   handleChangeT(event) {
     this.setState({tempo: event.target.value});
   };
-
-  handleChangeTe(event) {
-    this.setState({teste: event.target.value});
-  }
 
   onRequest = async () =>{
 
@@ -72,12 +67,15 @@ handleChangeX(event) {
 
 
 render(){
-    const {lista} = this.state;
+  const {lista} = this.state;
     console.log(lista);
 
-    const ultimo = lista[lista.length -1];
-    console.log(ultimo);
-    
+    const listaID = lista.map((list) => {
+        return list.id
+    });
+
+    this.ultimo = listaID[listaID.length -1];
+    console.log(this.ultimo);
 
   return(
     <div className="container">
@@ -91,12 +89,6 @@ render(){
                 <div className="card-body-post">
 
                     <form>
-
-                        <div className="fields">
-                            
-                            <input type="text" id="idTeste" value={this.state.teste} onChange={this.handleChangeTe} className="campo" name="Teste" placeholder="Teste" />
-                        </div>
-
                         <div className="fields">
                             
                             <input type="text" id="x" value={this.state.eixoX} onChange={this.handleChangeX} className="campo" name="Eixo-X" placeholder="Eixo-X" />
