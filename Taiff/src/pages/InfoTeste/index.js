@@ -109,58 +109,64 @@ class InfoTeste extends Component{
 
                   <div className="fields">
                       
-                      <input type="text" className="campo" name="Execultante" placeholder="Executante"/>
+                      <input type="text" className="campo" name="Execultante" placeholder="Executante" onChange={this.handleChangeNome}/>
                   </div>
 
                   <div className="fields">
                       
-                      <input type="text" className="campo"name="Data" placeholder="xx/xx/xxxx"/>
+                      <input type="text" className="campo"name="Data" placeholder="xx/xx/xxxx" onChange={this.handleChangeData}/>
                   </div>
 
                   <div className="fields">
                       
-                      <input type="text" className="campo"name="Produto" placeholder="Produto"/>
+                      <input type="text" className="campo"name="Produto" placeholder="Produto" onChange={this.handleChangeTipo}/>
                   </div>
 
                   <div className="fields">
                       
-                      <input type="text" className="campo"name="Especificação" placeholder="Especificação"/>
+                      <input type="text" className="campo"name="Especificação" placeholder="Especificação" onChange={this.handleChangeEspec}/>
                   </div>
 
                   <div className="fields">
                       
-                      <input type="text" className="campo"name="Fabricante" placeholder="Fabricante"/>
+                      <input type="text" className="campo"name="Fabricante" placeholder="Fabricante" onChange={this.handleChangeFabri}/>
                   </div>
 
                   <div className="fields">
                       
-                      <input type="text" className="campo" name="Modelo na Placa" placeholder="Modelo na Placa"/>
+                      <input type="text" className="campo" name="Modelo na Placa" placeholder="Modelo na Placa" onChange={this.handleChangeModelo}/>
                   </div>
 
                   <div className="fields">
                       
-                      <input type="text" className="campo" name="Freq. da Placa [Hz]" placeholder="Freq. da Placa [Hz]"/>
+                      <input type="text" className="campo" name="Freq. da Placa [Hz]" placeholder="Freq. da Placa [Hz]" onChange={this.handleChangeFreq}/>
                   </div>
 
                   <div className="fields">
                       
-                      <input type="text" className="campo" name="País de Fabricação" placeholder="País de Fabricação"/>
+                      <input type="text" className="campo" name="País de Fabricação" placeholder="País de Fabricação" onChange={this.handleChangePais}/>
                   </div>
 
                   <div className="fields">
                       
-                      <input type="text" className="campo" name="Nome do Modelo Comercial" placeholder="Nome do Modelo Comercial"/>
+                      <input type="text" className="campo" name="Nome do Modelo Comercial" placeholder="Nome do Modelo Comercial" onChange={this.handleChangeNomeComercial}/>
                   </div>
 
                   <div className="fields">
                       
-                      <input type="text" className="campo" name="Tens. na Placa [V]" placeholder="Tens. na Placa [V]"/>
+                      <input type="text" className="campo" name="Tens. na Placa [V]" placeholder="Tens. na Placa [V]" onChange={this.handleChangeTens}/>
                   </div>
 
                   <div className="fields">
                       
-                      <input type="text" className="campo" name="Pot. da Placa [W]" placeholder="Pot. da Placa [W]"/>
+                      <input type="text" className="campo" name="Pot. da Placa [W]" placeholder="Pot. da Placa [W]" onChange={this.handleChangePot}/>
                   </div>
+
+                  <div className="fields">
+                      
+                      <input type="text" className="campo" name="Local" placeholder="Local do Teste" onChange={this.handleChangeLocal}/>
+                  </div>
+
 
                  
                   <div className="btn-post">

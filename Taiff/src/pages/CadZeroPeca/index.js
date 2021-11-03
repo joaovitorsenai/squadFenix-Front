@@ -82,7 +82,7 @@ render(){
                     </div>
 
                     <div className="btn-zeroPeca" >
-                            <a href="http://localhost:3000/cadTeste" onClick={this.onRequest} to="/cadTeste" type="submit">Enviar</a>
+                            <Link onClick={this.onRequest} to="/cadTeste" type="submit">Enviar</Link>
                         </div>
                 </form>
             <Footer/>
