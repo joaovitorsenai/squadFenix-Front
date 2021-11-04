@@ -2,8 +2,10 @@ import React, {Component} from "react";
 import api from "../../api";
 import Header from '../../Header'
 import Footer from '../../Footer'
+import { Link } from "react-router-dom";
 
 import './Form.css';
+import '../CSSbotao.css';
 
 
 
@@ -114,8 +116,8 @@ render(){
                             <input type="text" id="temp" value={this.state.tempo} onChange={this.handleChangeT} className="campo" name="Tempo(s)" placeholder="Tempo(s)" />
                         </div>
 
-                        <div className="btn-post">
-                            <button className="botao" onClick={this.onRequest} type="submit">Enviar</button>
+                        <div>
+                            <button className="botao" onClick={this.onRequest} >Enviar</button>
                         </div>
                     </form>
 

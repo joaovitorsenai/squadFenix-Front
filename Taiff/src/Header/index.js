@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 import img from '../pages/Home/logotaiff.png'
 
 import './Header.css';
+import '../pages/CSSbotao.css';
 
 
 function Header(){
@@ -15,10 +16,10 @@ function Header(){
                 </div>
                 <nav>
                 <ul>
-                    <li><Link className="linkH" to="/tabela">Tabela</Link></li>
-                    <li><Link className="linkH" to="/cadPosicoes">Cadastro de Posições</Link></li>
-                    <li><Link className="linkH" to="/grafico">Gráfico</Link></li>
-                    <li><Link className="linkH" to="/">Sair</Link></li>
+                    <li><Link className="botao" to="/tabela">Tabela</Link></li>
+                    <li><Link className="botao" to="/cadPosicoes">Cadastro de Posições</Link></li>
+                    <li><Link className="botao" to="/grafico">Gráfico</Link></li>
+                    <li><Link className="botao" to="/">Sair</Link></li>
                 </ul>
                </nav>
             </div>

@@ -4,6 +4,8 @@ import Header from "../../Header";
 import Footer from "../../Footer";
 import { Link } from "react-router-dom";
 
+import '../CSSbotao.css';
+
 class CadTeste extends Component{
 
     constructor(props){
@@ -68,27 +70,30 @@ render(){
 
         <div className="container">
             <Header/>
-            <h2> Cadastro de Teste</h2>
-                <form>
-                    <div className="fields">
-                        
-                        <input type="text" id="n" value={this.state.nome} onChange={this.handleChangeN} className="campo" name="Nome" placeholder="Nome"/>
-                    </div>
 
-                    <div className="fields">
-                        
-                        <input type="text" id="m" value={this.state.modelo} onChange={this.handleChangeM} className="campo" name="Modelo" placeholder="Modelo"/>
-                    </div>
-
-                    <div className="fields">
-                        
-                        <input type="text" id="d" value={this.state.dataTeste} onChange={this.handleChangeD} className="campo" name="Data" placeholder="xx/xx/xxxx"/>
-                    </div>
-
-                    <div className="btn-produto">
-                        <Link onClick={this.onRequest} to="/cadPosicoes" type="submit">Enviar</Link>
+            <div className="card-post">
+                <h1> Cadastro de Teste</h1>
+                    <form>
+                        <div className="fields">
+                            
+                            <input type="text" id="n" value={this.state.nome} onChange={this.handleChangeN} className="campo" name="Nome" placeholder="Nome"/>
                         </div>
-                </form>
+
+                        <div className="fields">
+                            
+                            <input type="text" id="m" value={this.state.modelo} onChange={this.handleChangeM} className="campo" name="Modelo" placeholder="Modelo"/>
+                        </div>
+
+                        <div className="fields">
+                            
+                            <input type="text" id="d" value={this.state.dataTeste} onChange={this.handleChangeD} className="campo" name="Data" placeholder="xx/xx/xxxx"/>
+                        </div>
+
+                        <div className="btn-produto">
+                            <Link className="botao" onClick={this.onRequest} to="/cadPosicoes" type="submit">Enviar</Link>
+                            </div>
+                    </form>
+                </div>
             <Footer/>
         </div>
     );

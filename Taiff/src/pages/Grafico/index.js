@@ -6,7 +6,7 @@ import Header from "../../Header";
 import Footer from "../../Footer";
 
 import "./Grafico.css"
-import { Title } from "chart.js";
+import '../CSSbotao.css';
 
 class Grafico extends Component{
 

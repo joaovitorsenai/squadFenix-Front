@@ -1,3 +1,9 @@
+.card-post{
+    background-color: darkgrey;
+    border-radius: 15px;
+    padding-left: 1.5%;
+}
+
 .title{
     font-family: Heebo;
     font-weight: 800;
@@ -17,20 +23,21 @@
     border-radius: 20px;
     padding-bottom: 10px;
     margin-bottom: 10px;
+    margin-left: 5px;
 
 }
 
-.botao{
-    background-color:#363636;
-    color: white;
-    border-color: black;   
+.title{
+    text-align: center;
 }
 
-.botao {
-    transition-duration: 0.4s;
-  }
-  
-.botao:hover {
-    background-color: #808080; /* Green */
-    color: white;
-  }
+.group{
+    position: relative;
+    margin-left: 5%;
+}
+
+.btn-post{
+    margin-left: 6%;
+}
+
+
