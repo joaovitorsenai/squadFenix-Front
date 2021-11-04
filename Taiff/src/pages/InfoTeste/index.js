@@ -3,9 +3,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import api from '../../api';
 import Header from '../../Header'
 import Footer from '../../Footer'
+import { Link } from 'react-router-dom';
 import relatorioPDF from "../../Reports/Relatorio/relatorio";
 
 import './Info.css';
+import '../CSSbotao.css';
 
 class InfoTeste extends Component{
     constructor(props){
@@ -103,70 +105,42 @@ class InfoTeste extends Component{
       <div className ="container">
 
          <Header/>
-            <div className="card-body-post">
-
+            <div className="card-post">
+              <h1 className="title">Dados Relatório</h1>
               <form>
+                <div className="group">
+                    <div className="fields">
+                        <input type="text" className="campo" name="Execultante" placeholder="Executante" onChange={this.handleChangeNome}/>
+                  
+                        <input type="text" className="campo"name="Data" placeholder="xx/xx/xxxx" onChange={this.handleChangeData}/>
+                  
+                        <input type="text" className="campo"name="Produto" placeholder="Produto" onChange={this.handleChangeTipo}/>
+                    </div>
 
-                  <div className="fields">
-                      
-                      <input type="text" className="campo" name="Execultante" placeholder="Executante" onChange={this.handleChangeNome}/>
+                    <div className="fields">
+                        <input type="text" className="campo"name="Especificação" placeholder="Especificação" onChange={this.handleChangeEspec}/>
+                                          
+                        <input type="text" className="campo"name="Fabricante" placeholder="Fabricante" onChange={this.handleChangeFabri}/>                 
+                        
+                        <input type="text" className="campo" name="Modelo na Placa" placeholder="Modelo na Placa" onChange={this.handleChangeModelo}/>
+                    </div>
+
+                    <div className="fields">                     
+                        <input type="text" className="campo" name="Freq. da Placa [Hz]" placeholder="Freq. da Placa [Hz]" onChange={this.handleChangeFreq}/>
+                                        
+                        <input type="text" className="campo" name="País de Fabricação" placeholder="País de Fabricação" onChange={this.handleChangePais}/>
+                                                    
+                        <input type="text" className="campo" name="Nome do Modelo Comercial" placeholder="Nome do Modelo Comercial" onChange={this.handleChangeNomeComercial}/>
+                    </div>
+
+                    <div className="fields">                      
+                        <input type="text" className="campo" name="Tens. na Placa [V]" placeholder="Tens. na Placa [V]" onChange={this.handleChangeTens}/>
+                                                            
+                        <input type="text" className="campo" name="Pot. da Placa [W]" placeholder="Pot. da Placa [W]" onChange={this.handleChangePot}/>
+                                                            
+                        <input type="text" className="campo" name="Local" placeholder="Local do Teste" onChange={this.handleChangeLocal}/>
+                    </div>
                   </div>
-
-                  <div className="fields">
-                      
-                      <input type="text" className="campo"name="Data" placeholder="xx/xx/xxxx" onChange={this.handleChangeData}/>
-                  </div>
-
-                  <div className="fields">
-                      
-                      <input type="text" className="campo"name="Produto" placeholder="Produto" onChange={this.handleChangeTipo}/>
-                  </div>
-
-                  <div className="fields">
-                      
-                      <input type="text" className="campo"name="Especificação" placeholder="Especificação" onChange={this.handleChangeEspec}/>
-                  </div>
-
-                  <div className="fields">
-                      
-                      <input type="text" className="campo"name="Fabricante" placeholder="Fabricante" onChange={this.handleChangeFabri}/>
-                  </div>
-
-                  <div className="fields">
-                      
-                      <input type="text" className="campo" name="Modelo na Placa" placeholder="Modelo na Placa" onChange={this.handleChangeModelo}/>
-                  </div>
-
-                  <div className="fields">
-                      
-                      <input type="text" className="campo" name="Freq. da Placa [Hz]" placeholder="Freq. da Placa [Hz]" onChange={this.handleChangeFreq}/>
-                  </div>
-
-                  <div className="fields">
-                      
-                      <input type="text" className="campo" name="País de Fabricação" placeholder="País de Fabricação" onChange={this.handleChangePais}/>
-                  </div>
-
-                  <div className="fields">
-                      
-                      <input type="text" className="campo" name="Nome do Modelo Comercial" placeholder="Nome do Modelo Comercial" onChange={this.handleChangeNomeComercial}/>
-                  </div>
-
-                  <div className="fields">
-                      
-                      <input type="text" className="campo" name="Tens. na Placa [V]" placeholder="Tens. na Placa [V]" onChange={this.handleChangeTens}/>
-                  </div>
-
-                  <div className="fields">
-                      
-                      <input type="text" className="campo" name="Pot. da Placa [W]" placeholder="Pot. da Placa [W]" onChange={this.handleChangePot}/>
-                  </div>
-
-                  <div className="fields">
-                      
-                      <input type="text" className="campo" name="Local" placeholder="Local do Teste" onChange={this.handleChangeLocal}/>
-                  </div>
-
 
                  
                   <div className="btn-post">
