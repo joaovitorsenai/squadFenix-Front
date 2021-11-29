@@ -155,7 +155,7 @@ function relatorioPDF(medias, nome, data, local, tipoProduto, especificar, fabri
                 widths: [50, 50, 50],
 				body: [
 					['T1', 'T2', 'T3'],
-					['1', '2', '3']
+					['114.5', '123.6', '117.9']
 				]
 			},
             layout: {
@@ -177,7 +177,7 @@ function relatorioPDF(medias, nome, data, local, tipoProduto, especificar, fabri
             widths: [50],
             body: [
                 ['TM'],
-                ['1']
+                ['125.7']
             ]
         },
             layout: {
@@ -198,7 +198,7 @@ function relatorioPDF(medias, nome, data, local, tipoProduto, especificar, fabri
             widths: [50],
             body: [
                 ['T'],
-                ['1']
+                ['126.0']
             ]
         },
             layout: {
