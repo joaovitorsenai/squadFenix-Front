@@ -1,9 +1,16 @@
 import React, { Component } from "react";
-import {Line} from 'react-chartjs-2';
+import { Line, Chart } from 'react-chartjs-2';
+import 'chartjs-adapter-luxon';
+import StreamingPlugin from 'chartjs-plugin-streaming';
 import {Link} from 'react-router-dom';
 import api from "../../api";
 import Header from "../../Header";
 import Footer from "../../Footer";
+
+Chart.register(StreamingPlugin);
+
+
+
 
 import "./Grafico.css"
 import '../CSSbotao.css';
@@ -17,73 +24,77 @@ class Grafico extends Component{
         const response = await api.get('/temperaturas');
         this.setState({dados : response.data})
       }
+      
 
     render(){
 
-        const {dados} = this.state;
+        /*const {dados} = this.state;
         console.log(dados);
-
-        const id = dados.map((dado) =>(dado.id));
+       
+        const dataTeste = dados.map((dado) =>(dado.dataTeste));
         const t1 = dados.map((dado) =>(dado.t1));
         const t2 = dados.map((dado) =>(dado.t2));
         const t3 = dados.map((dado) =>(dado.t3));
-        const tA = dados.map((dado) =>(dado.tAmbiente));
-
-         
+        const tA = dados.map((dado) =>(dado.tAmbiente));*/
+          
     return(
         <div className="container">
             <Header/>
                 <div className="grafico">
                 <Line 
                 data={{
-                    labels: id,
+                    labels: [],
                     datasets: [
                         {
                         label: 'Termopar A',
-                        data: tA,
+                        data: [],
                         fill: false,
-                        backgroundColor: [
-                            'rgba(0,0,0,0)',
-                            ],
-                        borderColor: [
+                        tension: 0.3,
+                        backgroundColor: 
                             'rgba(148,0,211,0.50)',
-                            ],
+                            
+                        borderColor: 
+                            'rgba(148,0,211,0.50)',
+                            
                         borderWidth: 2
                         },
                         {
                         label: 'Termopar 1',
-                        data: t1,
+                        data: [],
                         fill: false,
-                        backgroundColor: [
-                            'rgba(0,0,0,0)',
-                                ],
-                        borderColor: [
+                        tension: 0.3,
+                        backgroundColor: 
                             'rgba(0,0,128,0.50)',
-                            ],
+                                
+                        borderColor: 
+                            'rgba(0,0,128,0.50)',
+                            
                         borderWidth: 2
                         },
                         {
                             label: 'Termopar 2',
-                            data: t2,
+                            data: [],
                             fill: false,
-                            backgroundColor: [
-                                'rgba(0,0,0,0)',
-                                ],
-                            borderColor: [
+                            tension: 0.3,
+                            backgroundColor: 
                                 'rgba(139,0,0,0.50)',
-                            ],
+                                
+                            borderColor: 
+                                'rgba(139,0,0,0.50)',
+                            
                             borderWidth: 2
                         },
                         {
                             label: 'Termopar 3',
-                            data: t3,
+                            data: [],
                             fill: false,
-                            backgroundColor: [
-                                'rgba(0,0,0,0)' ,
-                            ],
-                            borderColor: [    
+                            tension: 0.3,
+                            backgroundColor: 
+                                'rgba(0,100,0,0.50)', 
+                            
+                            borderColor:    
                                 'rgba(0,100,0,0.50)',   
-                            ],
+                            
                             borderWidth: 2
                         },
                     ],
@@ -94,13 +105,22 @@ class Grafico extends Component{
                     options={{
                         maintainAspectRatio: false,
                         scales:{
-                            yAxes:[
-                                {
-                                    ticks:{
-                                        beginAtZero: true
-                                    }
-                                }
-                            ]
+                            x:{
+                                type: 'realtime',
+                                realtime: {
+                                    onRefresh: chart => {
+            
+                                        fetch('http://localhost:8080/temperaturas')
+                                          .then(response => response.json())
+                                          .then(data => {
+                                             console.log(data)   
+                                            chart.data.datasets[0].data.push(...data);
+            
+                                            chart.update('quiet');
+                                          });
+                            }}
+                            },
+                            
                         }
                     }} 
                     
